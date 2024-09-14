@@ -1,0 +1,30 @@
+{
+  "name": "nreact",
+  "version": "1.0.0",
+  "description": "description by me",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devsm9/React-dev.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "shirish",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/devsm9/React-dev/issues"
+  },
+  "homepage": "https://github.com/devsm9/React-dev#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}
