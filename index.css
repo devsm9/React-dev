@@ -1,0 +1,55 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid gray;
+    border-radius: 20px;
+}
+
+.nav-items > ul{
+    display: flex;
+    list-style-type: none;
+    padding-right: 30px;
+}
+
+.nav-items > ul > li {
+    padding: 0px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo-container {
+    padding-left: 30px;
+}
+
+.logo {
+    width: 100px;
+}
+
+/* body styling */
+
+.body {
+    margin-top: 20px;
+    border: 1px solid gray;
+}
+
+.res-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.res-card{
+    padding: 2px;
+    width: 200px;
+    background-color: aqua;
+    margin: 5px;
+    
+}
+
+.res-card:hover{
+    border: 1px solid red;
+}
+
+.item-img{
+    width: 95%;
+    
+}
