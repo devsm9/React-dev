@@ -40,8 +40,9 @@
 .res-card{
     padding: 2px;
     width: 200px;
-    background-color: aqua;
+    background-color: lightgrey;
     margin: 5px;
+    height: 350px;
     
 }
 
@@ -51,5 +52,6 @@
 
 .item-img{
     width: 95%;
+    height :35%;
     
 }

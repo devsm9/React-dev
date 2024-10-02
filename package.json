@@ -4,6 +4,7 @@
   "description": "description by me",
   "main": "App.js",
   "scripts": {
+    "start": "npx parcel index.html",
     "test": "jest"
   },
   "repository": {
