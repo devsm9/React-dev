@@ -55,3 +55,9 @@
     height :35%;
     
 }
+
+.loginBtn{
+    border: solid 1px black;
+    border-radius: 10px;
+    width: 60px;
+}
