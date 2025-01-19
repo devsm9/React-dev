@@ -6,15 +6,14 @@ import Footer from "./components/Footer";
 import About from "./components/About";
 import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
-import { createBrowserRouter ,RouterProvider } from "react-router-dom";
+import { createBrowserRouter ,RouterProvider,Outlet } from "react-router-dom";
 
 const AppLayout = () => {
   
   return (
     <div className="App">
       <Header />
-      <Body />
-      <Footer />
+      <Outlet/>
     </div>
   );
 };
@@ -22,18 +21,27 @@ const AppLayout = () => {
 const router = createBrowserRouter([{
   path: "/",
   element : <AppLayout/>,
-  errorElement: <Error/>
+  children:[
+    {
+      path:'/',
+      element:<Body/>,
+      errorElement:<Error/>
+    },
+    {
+      path : "/about",
+      element: <About/>,
+      errorElement: <Error/>
+      },
+      {
+      path: "/contact",
+      element: <ContactUs/>,
+      errorElement:<Error/>
+      }
+  ],
+  errorElement:<Error/>
+  
 },
-{
-path : "/about",
-element: <About/>,
-errorElement: <Error/>
-},
-{
-path: "/contact",
-element: <ContactUs/>,
-errorElement:<Error/>
-}
+
 
 ]);
 

@@ -5,4 +5,4 @@ const ContactUs =()=>{
         </div>
     )
 }
-export default ContactUs
+export default ContactUs;

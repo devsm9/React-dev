@@ -61,3 +61,8 @@
     border-radius: 10px;
     width: 60px;
 }
+
+.error-page{
+    color: rgb(255, 58, 23);
+    font-weight: bold;
+}
