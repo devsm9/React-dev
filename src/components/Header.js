@@ -16,10 +16,10 @@ const Header = () => {
   
         <div className="nav-items">
           <ul>
-            <li><Link to='/' >Home</Link></li>
-            <li><Link to='/about'>About Us</Link></li>
-            <li><Link to='/contact'>Contact Us</Link></li>
-            <li><Link to='/cart'>Cart</Link></li>
+            <li><Link className="res-card-text" to='/' >Home</Link></li>
+            <li><Link className="res-card-text" to='/about'>About Us</Link></li>
+            <li><Link className="res-card-text" to='/contact'>Contact Us</Link></li>
+            <li><Link className="res-card-text" to='/cart'>Cart</Link></li>
             <button className="loginBtn" 
             onClick ={()=>{loginBtn === 'login' ?
               setLoginBtn('logout'):

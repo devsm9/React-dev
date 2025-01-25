@@ -1,10 +1,14 @@
-const About =() =>{
+import User from "./User";
+import UserClass from "./UserClass";
 
-    return (
-        <>
-            <p>About component </p>
-        </>
-    )
-}
+const About = () => {
+  return (
+    <>
+      <p>About component </p>
+      {/* <User name={"Shirish function"} /> */}
+      <UserClass name={"Shirish class"}/>
+    </>
+  );
+};
 
 export default About;

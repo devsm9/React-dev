@@ -40,7 +40,9 @@
 .res-card{
     padding: 2px;
     width: 200px;
-    background-color: lightgrey;
+    /* background-color: lightgrey; */
+    background: linear-gradient(to right, #eee, #fafafa 50%, #eee);
+
     margin: 5px;
     height: 350px;
     
@@ -48,6 +50,12 @@
 
 .res-card:hover{
     border: 1px solid red;
+}
+
+.res-card-text{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
 }
 
 .item-img{
@@ -65,4 +73,16 @@
 .error-page{
     color: rgb(255, 58, 23);
     font-weight: bold;
+}
+
+.shimmer-card{
+    height: 300px;
+    width: 200px;
+    padding: 2px;
+    margin: 5px;
+    background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+}
+
+.user-info{
+    border: solid 1px black;
 }

@@ -1,6 +1,9 @@
 import React from "react";
 import ResCard from "./ResCard";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { RESTAURENT_LIST } from "../utils/ServiceURLs";
+import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [restaurentList, setrestaurentList] = useState([]);
@@ -12,19 +15,17 @@ const Body = () => {
   const fetchData = async () => {
     try{
     const response = await fetch(
-      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=18.61610&lng=73.72860"
+      RESTAURENT_LIST
     );
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const rawData = await response.text();
-  const data = JSON.parse(rawData);
-    // const data = await response.json();
-    // const restroList = data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    const data = JSON.parse(rawData);
     setrestaurentList(
       data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
-    console.log("restro list", restaurentList);
+    console.log("restro list", data?.data?.cards[2]?.card?.card);
   } catch (error) {
     console.error("Fetch error: ", error);
   }
@@ -33,38 +34,28 @@ const Body = () => {
 };
   if (restaurentList?.length === 0) {
     return (
-      <>
-        <div style={{ justifyContent: "space-evenly", display: "flex" }}>
-          {" "}
-          <div className="res-card"></div>
-          <div className="res-card"></div>
-          <div className="res-card"></div>
-          <div className="res-card"></div>
-          <div className="res-card"></div>
-        </div>
-      </>
+      <Shimmer/>
     );
   }
   return (
     <div className="body">
       <div className="search">
-        Search Box
+        Search Box    
         <button
           onClick={() => {
             FilteredList = restaurentList.filter(
-              (zzz) => zzz.info.avgRating > 4
+              (list) => list.info.avgRating > 4
             );
-            console.log("filtered res", FilteredList);
             setrestaurentList(FilteredList);
           }}
         >
-          Top rated
+          Top rated 
         </button>
       </div>
 
       <div className="res-container">
         {restaurentList?.map((restaurant) => (
-          <ResCard resData={restaurant} />
+         <Link className="res-card-text" to={"/restaurent/" + restaurant.info.id } key={restaurant.info.id}> <ResCard resData={restaurant}  /> </Link>
         ))}
       </div>
     </div>
