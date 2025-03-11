@@ -1,14 +1,15 @@
 {
   "name": "nreact",
   "version": "1.0.0",
-  "homepage": "https://devsm9.github.io/React-dev",
+  "homepage": "https://devsm9.github.io/React-dev/",
   "description": "description by me",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
     "start": "npx parcel index.html",
-    "build": "parcel build index.html --dist-dir dist --public-url ./",
+    "build": "parcel build index.html --public-url ./",
     "test": "jest"
+ 
   },
   "repository": {
     "type": "git",
