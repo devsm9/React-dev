@@ -23,11 +23,10 @@ const Restaurent = () => {
     const itemCards = data?.itemCards || [];
     const {resId} = useParams()
     return (
-        <div>
-            <h2>{name} - {costForTwo}</h2>
+        <div className="restro-menu">
+            <h2>{name} - {costForTwo/100}</h2>
             <h3>{cuisines.join(', ')}</h3>
-            <p>
-               {itemCards.map(item=> <li>{item?.card?.info?.name} - Rs.
+            <p>{itemCards.map(item=> <li>{item?.card?.info?.name} - Rs.
                     {item?.card.info.defaultPrice/100 || item.card.info.price/100}</li>)} 
             </p>
         </div>
