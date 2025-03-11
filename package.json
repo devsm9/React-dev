@@ -1,10 +1,13 @@
 {
   "name": "nreact",
   "version": "1.0.0",
+  "homepage": "https://devsm9/github.io/React-dev",
   "description": "description by me",
-  "main": "App.js",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "start": "npx parcel index.html",
+    "build": "parcel build src/index.html --dist-dir dist",
     "test": "jest"
   },
   "repository": {
@@ -19,15 +22,17 @@
   "bugs": {
     "url": "https://github.com/devsm9/React-dev/issues"
   },
-  "homepage": "https://github.com/devsm9/React-dev#readme",
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "parcel": "^2.12.0",
     "process": "^0.11.10"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.0.9",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.1"
+    "react-router-dom": "^7.1.1",
+    "tailwindcss": "^4.0.9"
   },
   "@parcel/resolver-default": {
     "packageExports": true
