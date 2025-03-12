@@ -1,7 +1,7 @@
 const ContactUs =()=>{
     return(
-        <div>
-            <p>Contact us Page</p>
+        <div className="justify-center flex font-bold">
+            <h4>Coming soon...</h4>
         </div>
     )
 }

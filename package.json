@@ -9,7 +9,6 @@
     "start": "npx parcel index.html",
     "build": "parcel build index.html --public-url ./",
     "test": "jest"
- 
   },
   "repository": {
     "type": "git",
@@ -24,16 +23,19 @@
     "url": "https://github.com/devsm9/React-dev/issues"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.13",
+    "autoprefixer": "^10.4.21",
     "gh-pages": "^6.3.0",
     "parcel": "^2.12.0",
-    "process": "^0.11.10"
+    "postcss": "^8.5.3",
+    "process": "^0.11.10",
+    "tailwindcss": "^4.0.13"
   },
   "dependencies": {
-    "@tailwindcss/postcss": "^4.0.9",
+    "antd": "^5.24.3",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.1",
-    "tailwindcss": "^4.0.9"
+    "react-router-dom": "^7.1.1"
   },
   "@parcel/resolver-default": {
     "packageExports": true

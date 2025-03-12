@@ -42,8 +42,8 @@ if(onlineStatus === false)
     {restaurentList?.length === 0 ?
         <Shimmer/> :<></>
     }
-    <div className="body">
-      <div className="search">
+    <div className="margin-top: 20px;">
+      {/* <div className="search">
         Search Box    
         <button
           onClick={() => {
@@ -55,11 +55,11 @@ if(onlineStatus === false)
         >
           Top rated 
         </button>
-      </div>
+      </div> */}
 {/* {console.log(restaurentList)} */}
-      <div className="res-container">
+      <div className=" flex flex-wrap justify-center">
         {restaurentList?.map((restaurant) => (
-         <Link className="res-card-text" to={"/restaurent/" + restaurant.info.id } key={restaurant.info.id}> <ResCard resData={restaurant}  /> </Link>
+         <Link className="" to={"/restaurent/" + restaurant.info.id } key={restaurant.info.id}> <ResCard resData={restaurant}  /> </Link>
         ))}
       </div>
     </div>

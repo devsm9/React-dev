@@ -8,6 +8,7 @@ import ContactUs from "./components/ContactUs";
 import Error from "./components/Error";
 import { createBrowserRouter ,RouterProvider,Outlet } from "react-router-dom";
 import Restaurent from "./components/Restaurent";
+import Login from "./components/Login";
 
 const AppLayout = () => {
   
@@ -41,6 +42,11 @@ const router = createBrowserRouter([{
       {
         path: "/restaurent/:resId",
         element:<Restaurent/>,
+        errorElement:<Error/>
+      },
+      {
+        path: "/login",
+        element:<Login/>,
         errorElement:<Error/>
       }
   ],
