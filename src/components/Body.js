@@ -2,7 +2,7 @@ import React from "react";
 import ResCard from "./ResCard";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { RESTAURENT_LIST } from "../utils/ServiceURLs";
+import { RESTAURENT_LIST_URL } from "../utils/ServiceURLs";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
@@ -15,7 +15,7 @@ const Body = () => {
   const fetchData = async () => {
     try{
     const response = await fetch(
-      RESTAURENT_LIST
+      RESTAURENT_LIST_URL
     );
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
@@ -23,7 +23,7 @@ const Body = () => {
     const rawData = await response.text();
     const data = JSON.parse(rawData);
     setrestaurentList(
-      data?.data?.cards[2]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      data?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
     console.log("restro list", data?.data?.cards[2]?.card?.card);
   } catch (error) {
