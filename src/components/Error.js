@@ -6,10 +6,11 @@ const Error =()=>{
     return(
        
        <div>
-            <Header/>
-            <h1 className="error-page"> Error !!! </h1>
-            <h2>Something went wrong !</h2>
-            <h3 className="error-page">{err.status} - {err.data}</h3>
+            {/* <Header/> */}
+            <h1 className="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50"> Error !!! </h1>
+            <h2 className="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50">Something went wrong !</h2>
+            <h3 className="flex items-center p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50">{err.status} {err.statusText} - {err.data}</h3>
+            {/* <p className="">{err.error.stack}</p> */}
         </div>
     )
 }

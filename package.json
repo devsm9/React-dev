@@ -25,9 +25,11 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "@tailwindcss/postcss": "^4.0.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^7.1.1"
+    "react-router-dom": "^7.1.1",
+    "tailwindcss": "^4.0.15"
   },
   "@parcel/resolver-default": {
     "packageExports": true
