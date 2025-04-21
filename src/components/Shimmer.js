@@ -24,4 +24,15 @@ return (
   </div>
 )
 }
+
+export const DataShimmer =() =>{
+  return (
+    <div className="flex flex-wrap">
+      {[...Array(1)].map((__,index)=>(
+        <Shimmer key={index} />
+      ))}
+  
+    </div>
+  )
+}
 export default ShimmerList
