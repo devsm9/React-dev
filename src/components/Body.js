@@ -1,13 +1,15 @@
 import React from "react";
 import ResCard from "./ResCard";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { RESTAURENT_LIST_URL } from "../utils/ServiceURLs";
 import Shimmer from "./Shimmer";
 import OnlineStatus from "./OnlineStatus";
+import UserContextStore from "../utils/UserContextStore";
 
 const Body = () => {
   const [restaurentList, setrestaurentList] = useState([]);
+  const {userName1, setUserName} = useContext(UserContextStore)
 const onlineStatus =OnlineStatus()
   useEffect(() => {
     fetchData();
@@ -39,6 +41,12 @@ const onlineStatus =OnlineStatus()
 if(onlineStatus === false)
   return(<p> You are offline</p>)
   return (<>
+  <label>User Name:</label>
+  <input className="p-2 border-1 rounded-xl"
+  label ='test'
+  value={userName1}
+  onChange={(e)=> setUserName(e.target.value)}
+  ></input>
     {restaurentList?.length === 0 ?
         <Shimmer/> :<></>
     }

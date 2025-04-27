@@ -7,6 +7,7 @@ import RestCategory from './RestCategory';
 
 const Restaurent = () => {
   const [restaurantList, SetRestaurentList] = useState([]);
+  const [showIndex , setShowIndex] = useState(0);
 
   useEffect(() => {
     fetchRestaurent();
@@ -44,8 +45,8 @@ const Restaurent = () => {
 
           {/* {******CATEGORIES********} */}
           
-            {RestaurentRegularCards?.map((category) => (
-            <RestCategory key={data?.title} data={category?.card?.card}/>
+            {RestaurentRegularCards?.map((category, index) => (
+            <RestCategory key={data?.title} data={category?.card?.card} showItems={index === showIndex ? true : false} setShowIndex={()=>setShowIndex(index)}/>
               ))} 
           
         </div>

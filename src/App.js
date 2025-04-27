@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,14 +9,19 @@ import Error from "./components/Error";
 import { createBrowserRouter ,RouterProvider,Outlet } from "react-router-dom";
 import Restaurent from "./components/Restaurent";
 import Login from "./components/Login";
+import UserContextStore from "./utils/UserContextStore";
 
 const AppLayout = () => {
+
+  const [userName, setUserName] = useState('default')
   
   return (
+    <UserContextStore.Provider value={{userName1:userName, setUserName}}>
     <div className="App">
       <Header />
       <Outlet/>
     </div>
+    </UserContextStore.Provider>
   );
 };
 

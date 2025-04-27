@@ -1,7 +1,11 @@
 import React from "react";
 import { CDN_IMAGE_URL } from "../utils/ServiceURLs";
+import { useContext } from "react";
+import UserContextStore from '../utils/UserContextStore'
+
 const ResCard = (props) => { 
   const { resData } = props;
+  const UserName = useContext(UserContextStore)
   return (
     <div className="mt-6 h-90 w-70 mr-5  hover:bg-gray-100 border border-gray-200 rounded-lg shadow-sm">
       <div className="h-[46%]  w-[100%]">
@@ -31,6 +35,13 @@ const ResCard = (props) => {
         <h4 className="mb-1 font-normal text-gray-500 dark:text-gray-400">
           {resData?.info.costForTwo}
         </h4>
+        <h4 className="mb-1 font-normal text-gray-500 dark:text-gray-400">
+          <UserContextStore.Consumer>
+            {(data)=> data.userName1}
+          </UserContextStore.Consumer>
+          {/* {UserName.userName1} */}
+        </h4>
+
         
       </div>
     </div>
