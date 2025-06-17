@@ -2,9 +2,9 @@
   "name": "nreact",
   "version": "1.0.0",
   "description": "description by me",
-  "main": "App.js",
   "scripts": {
     "start": "npx parcel index.html",
+    "build": "npx parcel build index.html --public-url ./ ",
     "test": "jest"
   },
   "repository": {
@@ -25,9 +25,11 @@
     "process": "^0.11.10"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.7.0",
     "@tailwindcss/postcss": "^4.0.15",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.1",
     "tailwindcss": "^4.0.15"
   },
